@@ -15,6 +15,10 @@
     type: number
     sql: ${TABLE}.usage
 
+  - measure: usage_total
+    type: sum
+    sql: ${usage}
+    
   - measure: count
     type: count
     drill_fields: []
