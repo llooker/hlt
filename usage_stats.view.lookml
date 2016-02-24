@@ -1,8 +1,8 @@
 - view: usage_stats
   fields:
 
-  - dimension: android
-    type: number
+  - measure: android
+    type: sum
     value_format_name: id
     sql: ${TABLE}.android
 
@@ -12,8 +12,8 @@
     convert_tz: false
     sql: ${TABLE}.date
 
-  - dimension: ios
-    type: number
+  - measure: ios
+    type: sum
     sql: ${TABLE}.ios
 
   - dimension: stat_type
