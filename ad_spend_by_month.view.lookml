@@ -8,6 +8,7 @@
   - measure: total_amount_spent
     type: sum
     sql: ${amount_spent}
+    value_format: '$#,##0.0'
     
   - measure: total_impressions
     type: sum
