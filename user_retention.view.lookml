@@ -9,13 +9,15 @@
 
   - dimension: users
     type: number
+    hidden: true
     sql: ${TABLE}.users
 
   - dimension: weeks_since_start
     type: number
     sql: ${TABLE}.weeks_since_start
 
-  - measure: count
-    type: count
+  - measure: user_count
+    type: sum
+    sql: ${users}
     drill_fields: []
 
