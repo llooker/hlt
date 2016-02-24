@@ -25,6 +25,11 @@
     type: number
     sql: ${TABLE}.cost_per_result
 
+  - measure: avg_cost_per_result
+    type: avg
+    sql: ${cost_per_result}
+    value_format: '$#,##0.00'
+
   - dimension: cpc
     type: number
     sql: ${TABLE}.cpc
@@ -94,6 +99,10 @@
   - dimension: results
     type: number
     sql: ${TABLE}.results
+    
+  - measure: total_results
+    type: sum
+    sql: ${results}
 
   - dimension: video_yesno
     type: string

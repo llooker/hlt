@@ -14,6 +14,11 @@
   - dimension: percent
     type: number
     sql: ${TABLE}.percent
+    
+  - measure: percent_score
+    type: sum
+    sql: ${percent}
+    value_format: '#0.0%'
 
   - measure: count
     type: count
