@@ -11,24 +11,24 @@
     convert_tz: false
     sql: ${TABLE}.last_updated
 
-  - dimension: star1
-    type: number
+  - measure: 1_star
+    type: sum
     sql: ${TABLE}.star1
 
-  - dimension: star2
-    type: number
+  - measure: 2_star
+    type: sum
     sql: ${TABLE}.star2
 
-  - dimension: star3
-    type: number
+  - measure: 3_star
+    type: sum
     sql: ${TABLE}.star3
 
-  - dimension: star4
-    type: number
+  - measure: 4_star
+    type: sum
     sql: ${TABLE}.star4
 
-  - dimension: star5
-    type: number
+  - measure: 5_star
+    type: sum
     sql: ${TABLE}.star5
 
   - dimension: store
