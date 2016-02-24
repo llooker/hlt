@@ -5,6 +5,14 @@
     type: number
     sql: ${TABLE}.amount_spent
 
+  - measure: total_amount_spent
+    type: sum
+    sql: ${amount_spent}
+    
+  - measure: total_impressions
+    type: sum
+    sql: ${impressions}
+
   - dimension: app
     type: string
     sql: ${TABLE}.app
@@ -41,6 +49,11 @@
   - dimension: cpm_cost_per_1000
     type: number
     sql: ${TABLE}.cpm_cost_per_1000
+    
+  - measure: average_cpm_cost_per_1000
+    type: avg
+    sql: ${cpm_cost_per_1000}
+    value_format: '$#,##0.00'
 
   - dimension: ctr
     type: number
